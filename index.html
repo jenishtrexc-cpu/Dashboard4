@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title> ❤️</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@600;800&display=swap" rel="stylesheet">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Fredoka',sans-serif;}
+
+body{
+overflow:hidden;
+height:100vh;
+background:linear-gradient(-45deg,#ff0080,#ff4da6,#a64dff,#ff1a75);
+background-size:400% 400%;
+animation:gradient 8s infinite;
+display:flex;
+justify-content:center;
+align-items:center;
+color:white;
+text-align:center;
+}
+
+@keyframes gradient{
+0%{background-position:0% 50%}
+50%{background-position:100% 50%}
+100%{background-position:0% 50%}
+}
+
+h1{
+font-size:clamp(25px,6vw,45px);
+text-shadow:0 0 15px white,0 0 25px hotpink;
+animation:pulse 2s infinite;
+}
+
+@keyframes pulse{
+50%{transform:scale(1.08)}
+}
+
+.buttons{
+margin-top:30px;
+position:relative;
+width:100%;
+height:200px;
+}
+
+button{
+padding:15px 35px;
+font-size:18px;
+border:none;
+border-radius:40px;
+cursor:pointer;
+transition:0.3s;
+position:absolute;
+}
+
+#yes{
+left:10%;
+background:linear-gradient(45deg,#ff0055,#ff99cc);
+color:white;
+box-shadow:0 0 15px pink;
+}
+
+#no{
+right:10%;
+background:white;
+color:#ff0055;
+}
+
+#dramaText{
+margin-top:15px;
+font-size:18px;
+color:#fff;
+}
+
+#celebrate{
+display:none;
+flex-direction:column;
+align-items:center;
+overflow:auto;
+height:100vh;
+padding:20px;
+}
+
+.gallery img{
+width:90px;
+margin:5px;
+border-radius:15px;
+}
+
+.texts{
+margin-top:20px;
+background:rgba(255,255,255,0.2);
+padding:15px;
+border-radius:15px;
+}
+
+.gifbox img{
+width:100px;
+margin:5px;
+border-radius:15px;
+}
+
+#specialBtn{
+margin-top:20px;
+padding:15px 30px;
+background:white;
+color:#ff0055;
+border-radius:30px;
+}
+
+.popup{
+display:none;
+position:fixed;
+top:0;left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.8);
+justify-content:center;
+align-items:center;
+flex-direction:column;
+color:white;
+z-index:999;
+}
+
+.popup button{
+position:static;
+margin:10px;
+}
+
+.beg{
+position:absolute;
+width:60px;
+animation:moveBeg 5s infinite linear;
+}
+
+@keyframes moveBeg{
+0%{transform:translate(0,0)}
+50%{transform:translate(40px,40px)}
+100%{transform:translate(0,0)}
+}
+</style>
+</head>
+
+<body>
+
+<div id="main">
+<h1>HEYGIRL, WILL YOU BE MY VALENTINE?</h1>
+
+<div class="buttons">
+<button id="yes">YES 💖</button>
+<button id="no">NO 😜</button>
+</div>
+
+<div id="dramaText"></div>
+
+<img class="beg" src="https://media.giphy.com/media/l0HlBO7eyXzSZkJri/giphy.gif" style="top:10%;left:20%;">
+<img class="beg" src="https://media.giphy.com/media/3oz8xAFtqoOUUrsh7W/giphy.gif" style="bottom:10%;right:20%;">
+</div>
+
+<div id="celebrate">
+<h1>YOU DID ITTTT GIRLL 💘🔥</h1>
+
+<div class="gifbox">
+<img src="https://media.giphy.com/media/26BRuo6sLetdllPAQ/giphy.gif">
+
+<img src="https://media.giphy.com/media/5GoVLqeAOo6PK/giphy.gif">
+<img src="https://media.giphy.com/media/l2SpMUEMRJkkqYcta/giphy.gif">
+<img src="https://media.giphy.com/media/111ebonMs90YLu/giphy.gif">
+<img src="https://media.giphy.com/media/xT9IgG50Fb7Mi0prBC/giphy.gif">
+<img src="https://media.giphy.com/media/26AHONQ79FdWZhAI0/giphy.gif">
+</div>
+
+<button id="specialBtn">🎁 Something Special</button>
+
+<h2>Our Photos 📸</h2>
+<div class="gallery">
+<img src="https://picsum.photos/100?1">
+<img src="https://picsum.photos/100?2">
+<img src="https://picsum.photos/100?3">
+<img src="https://picsum.photos/100?4">
+<img src="https://picsum.photos/100?5">
+<img src="https://picsum.photos/100?6">
+<img src="https://picsum.photos/100?7">
+<img src="https://picsum.photos/100?8">
+<img src="https://picsum.photos/100?9">
+<img src="https://picsum.photos/100?10">
+</div>
+
+<h2 style="margin-top:30px;">Our Texts 💌</h2>
+<div class="texts">
+<p>❤️ You: I miss you already.</p>
+<p>💖 Me: It's been 5 minutes 😂</p>
+<p>💕 You: Still counts.</p>
+<p>💘 Me: You're my favorite person.</p>
+<p>💓 You: Stoppp I'm blushing.</p>
+<p>💞 Me: Marry me then.</p>
+<p>💝 You: Already planning it.</p>
+<p>🔥 Me: Forever?</p>
+<p>💗 You: Always.</p>
+<p>💟 Both: I love youuuu.
+  </p>
+  <p>These are the token of our love and some chats🤣</p>
+</div>
+
+</div>
+
+<div class="popup" id="popup">
+<h1>WILL YOU BE MY VALENTINE AGAIN??? 💥💘</h1>
+<button id="popupYes">YESSSS 😍</button>
+<button id="popupNo">NO 😜</button>
+</div>
+
+<script>
+
+let noCount=0;
+let yesBtn=document.getElementById("yes");
+let noBtn=document.getElementById("no");
+let drama=document.getElementById("dramaText");
+
+const lines=[
+"Why? 😢",
+"Please? 🥺",
+"Accept me 😭",
+"Don’t break my heart 💔",
+"Last chance 😭❤️"
+];
+
+noBtn.addEventListener("click",()=>{
+if(noCount<5){
+drama.innerText=lines[noCount];
+yesBtn.style.transform=`scale(${1 + noCount*0.3})`;
+noCount++;
+}
+});
+
+yesBtn.addEventListener("click",()=>{
+document.getElementById("main").style.display="none";
+document.getElementById("celebrate").style.display="flex";
+});
+
+document.getElementById("specialBtn").onclick=()=>{
+document.getElementById("popup").style.display="flex";
+};
+
+document.getElementById("popupYes").onclick=()=>{
+alert("I KNEW ITTTTT 💖🔥");
+};
+
+document.getElementById("popupNo").onclick=()=>{
+document.getElementById("popupYes").style.transform="scale(1.5)";
+};
+
+</script>
+
+</body>
+</html>
